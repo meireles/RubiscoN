@@ -1,8 +1,3 @@
----
-output:
-  html_document: default
----
-
 # Linking genes to ecosystems one carboxylation at a time
 
 ### Points of contact
