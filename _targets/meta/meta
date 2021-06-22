@@ -1,0 +1,39 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
+rubisco_uniprot_raw_data_file|stem|d28cbf5fa155cb84|178bf676d3bffa03|ec15a7ba891b74b7|-657551270|raw_data/UniProt/rubisco_uniprot_raw.tsv|t18799.9597874281s|711b407fb8f46e0e|37920438|file|vector|||111.925||
+try_raw_data_file|stem|13d7155ccbdbe1df|7641ce84fc8261f5|ef46db3751d8e999|637075572|raw_data/TRY/13403.zip|t18791.0153138171s|24314d574acdf867|146056627|file|vector|||0.002||
+phy_raw_data_file|stem|0800244683984657|0720d3255773d85f|ef46db3751d8e999|105963645|raw_data/phylo/v0.1/ALLMB.tre|t17386.7595023148s|4993f228ed1df88a|11512754|file|vector|||0.001||
+try_raw_data|stem|36f41fd964615bbb|fb67deb4f0df8ea5|e95ecd4ee3ba1f89|-774113921||t18799.9606783531s|91d9d7dd39bbf0bc|15949372|rds|vector|||59.853|One or more parsing issues, see problems for details|
+phy_raw_data|stem|1e49eb5837eea3b5|144a472c1641b0e7|1bb684b38917e625|-1232848932||t18799.9607324931s|4150f8788d0c4533|4853382|rds|vector|||3.685||
+try_species_lookup|stem|9e274bf68413f913|d5f127fe72e32cad|416d335c71734816|-1629803621||t18799.9665553857s|f264b877e3a58b4e|5734399|rds|vector|||350.401|Syrmatium veatchii, Canavalia mucunoides, Desmanthus ciliare, Desmodium clavitrichum, Havardia ebano, Parkinsonia macrum, Spatho|
+phy_species_lookup|stem|85cd44334075a9ed|d5b53c30ae3cf785|369a0fe2fb67ae8c|600290110||t18799.9892685433s|10dda4202a5fa09e|7919461|rds|vector|||1960.624|2 parsing failures. row  col           expected actual         file3352 Year 10TFTRUEFALSE   1969 literal data4109 Year|
+try_newname|stem|25d0b2a0b5908d6a|2f0623c743fd8bd0|80f29f299665c6df|1635186285||t18799.9895275666s|c659373df540b193|16565538|rds|vector|||0.004||
+phy_newname|stem|bc783f7256aa709d|bf29f22a6e079a6d|f3da9c060f83ad80|-2036779078||t18799.989542856s|5b9f699d56287d05|5538831|rds|vector|||0.001||
+rubisco_raw_data|stem|68d3264f54c25784|df166c43196a6eaf|216a1815c944e19a|-640465646||t18799.9991476496s|65270a4097dbddd1|2267231|rds|vector|||0.894||
+rubisco_species_lookup|stem|24034a59da641cdd|b44460fd2a3b4f9b|2069ebdf8f8d4b1b|1454174416||t18800.0007247923s|a46162e6551408f9|1512794|rds|vector|||135.693|Broussonetia kazinoki x Broussonetia broussonetia, Paris liiana, Anemone chinensis x Anemone anemone, 158, Styphnolobium japonic|
+rubisco_newname|stem|d2099735b312971f|82409bd11cb3bc0d|ee6745a9f3b7034f|-1045073910||t18800.0007386588s|a2d8f2edfc6146c2|2294387|rds|vector|||0.003||
+rubisco_raw_aa_fasta|stem|dc67b552c48564a8|36d31dbabcd43987|89d24f67179f5459|-603112246|raw_data/UniProt/rubisco_raw_aa.fasta|t18800.0007465687s|257ac78f32e95103|23618029|file|vector|||0.226||
+rubisco_raw_aa_features|stem|d5a5ddabfd9eb75b|5199d227aa3beffb|24faffc62f6de23a|-665737442|raw_data/UniProt/rubisco_raw_aa_features.tsv|t18800.002039803s|4d259648db98706e|6031802|file|vector|||111.422|data length 2 is not a submultiple or multiple of the number of columns 3|
+rubisco_scrubbed_aa_fasta|stem|f2faf5a7e2694670|a6a14175adf7f81d|fb207a75cf079ed8|-861509236|data/rubisco/rubisco_scrubbed_aa.fasta|t18800.0049497564s|9a076c31e6d763a1|23306974|file|vector|||250.988||
+rubisco_aligned_aa_fasta|stem|6dda567f5a02017a|212eba5f4901ac22|608ace6d99be324d|94412876|data/rubisco/rubisco_aligned_aa.fasta|t18800.020793649s|eec8a67572acabca|35153313|file|vector|||1368.014||
+rubisco_trimmed_alignment_aa|stem|a860478c32ce7ed9|270e69cedbda36d4|b8e98d64529a3e26|-1574729972|data/rubisco/rubisco_trimmed_alignment_aa.fasta|t18800.0208874773s|8acc6919cb04fcc5|25847457|file|vector|||7.682||
+rubisco_aa_composition|stem|6fb93931b166b04b|778c5cc1b667d9ba|b6cf34361fff6fa3|357875103||t18800.0209406049s|749ce53639e3b3df|754957|rds|vector|||3.675||
+rubisco_element_composition|stem|e9fae1760a088698|243d605c661a3d7c|29208405c0e155e9|-994936167||t18800.020989239s|3a74d080db4d02a1|689492|rds|vector|||3.677||
+phy_sp_only|stem|3b3a65e80be87275|88d86d2813ae864c|f913485f39624e0b|-197584182||t18800.0590451516s|2b68db82af778e67|4367307|rds|vector|||1.421||
+try_trait_lookup_file|stem|1dabfe46eb15813c|8814b34045b6394f|ef46db3751d8e999|540855464|raw_data/TRY/trait_lookup_sp_level.tsv|t18800.5482460298s|119bfb94d3ee2a6f|1672|file|vector|||0.003||
+try_combined_traits_by_sp|stem|1dfd40751b818c75|537f7b55a3573aef|082ec795c3eb200e|-1637227968||t18800.6486340603s|280a6844698e496e|588622|rds|vector|||8.009||
+mafft|function|2710e4c99c082a2d||||||||||||||
+find_outlier_aa_seq|function|a57cc6e8f1372ecb||||||||||||||
+remove_uncertain_seqs|function|83bee3e7de0dd148||||||||||||||
+trim_alignment_ends|function|b1661827fd02684a||||||||||||||
+get_element_composition|function|bab6404f33da4125||||||||||||||
+update_names|function|ac8d7fe55496f5be||||||||||||||
+download_uniprot_raw_data|function|6bb6c664b8cc1f02||||||||||||||
+parse_uniprot_features|function|36f128b351ddb59a||||||||||||||
+try_keep_txt|function|0bb33d7b0a52f859||||||||||||||
+parse_uniprot_fasta|function|48aad82f3b130ea1||||||||||||||
+read_and_trim_raw_try_data|function|8c809c56fae5b342||||||||||||||
+remove_genera_and_duplicated_tips|function|e4f704ada588c985||||||||||||||
+get_aa_composition|function|302404f2311fb7b7||||||||||||||
+get_accepted_plant_name|function|3737713fffffa027||||||||||||||
+initial_seq_cleanup|function|df8903169763898d||||||||||||||
+aggregate_traits_by_sp|function|60618f08a28a0345||||||||||||||
