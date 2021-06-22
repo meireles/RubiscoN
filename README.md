@@ -66,8 +66,7 @@ We currently using the megatree (v. 1.1) from [Smith & Brown 2018](https://bsapu
 
 ### rbcL
 
-Gathered the rbcL sequence from **UniPROT** for every species in TRY.
-
+Gathered every rubisco aa sequence from [UniPROT(https://www.uniprot.org/) using its API.
 
 ## Trait data
 
