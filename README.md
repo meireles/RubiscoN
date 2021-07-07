@@ -53,6 +53,8 @@ This doesn't mean that the project is reproducible across platforms. For example
 
 * `data` contains processed data that need to be read/written by a binary, e.g. the AA fasta files touched by MAFFT.
 
+* `kitchensink` **temporary** folder for random scrips and fig outputs.
+
 * `RubiscoN.Rproj` use RStudio and double click this guy to open the project
 
 ---
