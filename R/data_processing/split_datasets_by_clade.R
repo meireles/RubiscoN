@@ -1,10 +1,3 @@
-# library("ape")
-#
-# tar_load(phy_sp_only_intersect)
-# tar_load(try_combined_traits_by_sp_intersect)
-# tar_load(rubisco_aa_composition_intersect)
-# tar_load(rubisco_element_composition_intersect)
-
 
 split_data_by_clade_and_repackage = function(phy, try, aa, ele){
 

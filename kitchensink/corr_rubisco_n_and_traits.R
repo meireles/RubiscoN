@@ -4,7 +4,6 @@ library("corrplot")
 # load data
 tar_load(final_data)
 
-
 # Run correlations for each clade in final_data
 
 for(i in names(final_data)){
@@ -22,6 +21,10 @@ for(i in names(final_data)){
     try = try[ , col_keep_try]
     aa  = aa[ , col_keep_aa]
     ele = ele[ , col_keep_ele]
+
+
+    # add N : C to the element matrix
+    ele = cbind(ele, "N:C" = ele$N / ele$C)
 
     # combine data for correlations
     mat_aa_try = cbind(aa , try)
