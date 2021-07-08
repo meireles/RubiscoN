@@ -10,7 +10,6 @@ library("targets")     # manages the whole thing
 library("visNetwork")  # Explore target pipeline status
 library("conflicted")  # complain if function names are duplicated
 
-
 library("httr")        # talk to the web
 library("vroom")       # read tables. fast
 library("readr")       # table IO
@@ -30,7 +29,8 @@ library("kmer")        # kmer aa counting
 # Load functions
 ########################################
 
-invisible(sapply(dir("R", full.names = TRUE), source))
+invisible(sapply(dir("R/data_processing/", full.names = TRUE), source))
+invisible(sapply(dir("R/analyses/", full.names = TRUE), source))
 
 ########################################
 # Set options
@@ -148,6 +148,12 @@ list(
                                    prop_gap = 0.1),
                format = "file"),
 
+
+    tar_target(rubisco_trimmed_alignment_aa_by_sp,
+               clean_tax_and_pick_long_seq(path_in = rubisco_trimmed_alignment_aa,
+                                           path_out = "data/rubisco/rubisco_trimmed_alignment_aa_by_sp.fasta"),
+               format = "file"),
+
     ## TRY
     tar_target(try_combined_traits_by_sp,
                aggregate_traits_by_sp(try_newname)),
@@ -156,23 +162,50 @@ list(
     tar_target(phy_sp_only,
                remove_genera_and_duplicated_tips(phy_newname)),
 
+    ######################################
+    # extract data from rubisco
+    ######################################
 
-    ############################################################################
-    # Make datasets for analyses
-    ############################################################################
-
-    ## rubisco
     tar_target(rubisco_aa_composition,
-               get_aa_composition(path_in = rubisco_trimmed_alignment_aa)),
+               get_aa_composition(path_in = rubisco_trimmed_alignment_aa_by_sp)),
+
 
     tar_target(rubisco_element_composition,
-               get_element_composition(path_in = rubisco_trimmed_alignment_aa))
+               get_element_composition(path_in = rubisco_trimmed_alignment_aa_by_sp)),
+
 
     ######################################
     # Intersect datasets
     ######################################
 
-    # Will do this in the analyses code for now
+    tar_target(sp_intersect,
+               Reduce(intersect, list(phy_sp_only$tip.label,
+                                      try_combined_traits_by_sp$AccSpeciesName,
+                                      rubisco_aa_composition$organism,
+                                      rubisco_element_composition$organism))),
+
+    tar_target(phy_sp_only_intersect,
+               subset_phylo(tree = phy_sp_only, sp_keep = sp_intersect, brlens_tol = 1e-9)),
+
+    tar_target(try_combined_traits_by_sp_intersect,
+               {try_combined_traits_by_sp[try_combined_traits_by_sp$AccSpeciesName %in% sp_intersect, ]}),
+
+    tar_target(rubisco_aa_composition_intersect,
+               {rubisco_aa_composition[rubisco_aa_composition$organism %in% sp_intersect, ]}),
+
+    tar_target(rubisco_element_composition_intersect,
+               {rubisco_element_composition[rubisco_element_composition$organism %in% sp_intersect, ]}),
+
+
+    ######################################
+    # Repackage datasets
+    ######################################
+
+    tar_target(final_data,
+               split_data_by_clade_and_repackage(phy   = phy_sp_only_intersect,
+                                                 try   = try_combined_traits_by_sp_intersect,
+                                                 aa    = rubisco_aa_composition_intersect,
+                                                 ele   = rubisco_element_composition_intersect))
 
     ############################################################################
     # Analyses
@@ -180,6 +213,5 @@ list(
 
     # TODO
     # I'm keeping some the exploratory code in the kitchensink diretory
-
 
 )
