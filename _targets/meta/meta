@@ -39,7 +39,7 @@ which_genera_and_duplicated_species|function|11951991d8d2ee55||||||||||||||
 parse_uniprot_fasta|function|48aad82f3b130ea1||||||||||||||
 read_and_trim_raw_try_data|function|8c809c56fae5b342||||||||||||||
 subset_phylo|function|242ffec5d4a9df66||||||||||||||
-split_data_by_clade_and_repackage|function|1bb9522f71844db7||||||||||||||
+split_data_by_clade_and_repackage|function|30495724affd0d5f||||||||||||||
 get_aa_composition|function|302404f2311fb7b7||||||||||||||
 get_accepted_plant_name|function|3737713fffffa027||||||||||||||
 initial_seq_cleanup|function|df8903169763898d||||||||||||||
@@ -47,4 +47,4 @@ aggregate_traits_by_sp|function|60618f08a28a0345||||||||||||||
 remove_genera_and_duplicated_tips|function|1bbb511304ceb5b8||||||||||||||
 clean_tax_and_pick_long_seq|function|6cc4044904113621||||||||||||||
 sp_intersect|stem|347efd946838b6fc|3576fee73f407e84|86266c7410c1ba95|-441620937||t18816.1168134769s|5cf1d491681d4f8e|50747|rds|vector|||0.037||
-final_data|stem|49b2c6d73a58b904|522c178f13408cc6|9b1e4c581ae8ef51|-683886975||t18816.6620731031s|6dfaa03976c4ca41|927186|rds|vector|||0.306||
+final_data|stem|3f094978950531a5|522c178f13408cc6|e4f32ca69cd8c379|-683886975||t18817.5495264111s|5b79affad3b33c54|1060709|rds|vector|||0.419||

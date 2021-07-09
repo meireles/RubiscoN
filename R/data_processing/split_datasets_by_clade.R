@@ -6,7 +6,7 @@ split_data_by_clade_and_repackage = function(phy, try, aa, ele){
     ########################################
 
     # To list the labeled nodes on the tree
-    phy$node.label[ ! ( grepl("mrcaott", phy$node.label) | phy$node.label == "") ]
+    # phy$node.label[ ! ( grepl("mrcaott", phy$node.label) | phy$node.label == "") ]
 
 
     # Remove misplaced fern everywhere
@@ -14,7 +14,8 @@ split_data_by_clade_and_repackage = function(phy, try, aa, ele){
 
     # Pick node labels to split and find their node number
     clades_split = c("Caryophyllales", "Poales", "Asterales", "Ericales", "Laurales",
-                     "Malpighiales")
+                     "Malpighiales", "Fabales", "Sapindales", "Apiales", "Fagales",
+                     "Myrtales")
 
     clades_node  = sapply(clades_split, grep, x = phy$node.label)
     clades_node  = clades_node + ape::Ntip(phy)
